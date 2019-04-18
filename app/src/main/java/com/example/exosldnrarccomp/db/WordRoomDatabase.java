@@ -2,9 +2,11 @@ package com.example.exosldnrarccomp.db;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.exosldnrarccomp.daoInterface.WordDao;
 import com.example.exosldnrarccomp.entityTables.Word;
@@ -34,4 +36,12 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
+//    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback(){
+//        @Override
+//        public void onOpen(@NonNull SupportSQLiteDatabase db) {
+//            super.onOpen(db);
+//            new PopulateDbAsync(INSTANCE).execute();
+//        }
+//    };
 }
