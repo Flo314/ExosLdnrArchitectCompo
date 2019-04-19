@@ -21,8 +21,7 @@ public class Word {
     private String mWord;
 
     // Contructeur
-    public Word(int wordId, @NonNull String mWord) {
-        this.wordId = wordId;
+    public Word(@NonNull String mWord) {
         this.mWord = mWord;
     }
 
