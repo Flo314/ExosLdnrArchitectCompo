@@ -32,4 +32,8 @@ public class Word {
     public String getWord() {
         return this.mWord;
     }
+
+    public void setWordId(int wordId) {
+        this.wordId = wordId;
+    }
 }

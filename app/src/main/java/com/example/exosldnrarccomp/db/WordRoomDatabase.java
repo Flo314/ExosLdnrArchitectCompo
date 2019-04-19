@@ -59,9 +59,11 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         PopulateDbAsync(WordRoomDatabase db){
             mDao = db.wordDao();
         }
+
         @Override
-        protected Void doInBackground(Void... voids) {
+        protected Void doInBackground(final Void... params) {
             mDao.deleteAll();
+
             Word word = new Word("Hello");
             mDao.insert(word);
 

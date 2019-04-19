@@ -22,18 +22,15 @@ public class WordRepository {
     private WordDao mWordDao;
     private LiveData<List<Word>> mAllWords;
 
-    public WordRepository(Application application) {
-    }
-
-    // contructeur
-    public void WordPepository(Application application){
+     // contructeur
+     public WordRepository(Application application){
         WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
         mWordDao = db.wordDao();
         mAllWords = mWordDao.getAllWords();
     }
 
     // Getter qui notifiera l’observateur quand une donnée sera modifiée
-    public LiveData<List<Word>> getmAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 
